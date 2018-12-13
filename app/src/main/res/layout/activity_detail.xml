@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_detail"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/detail_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00BFFF"
+        app:navigationIcon="@drawable/back_icon"
+        app:title="Detail"
+        app:titleTextColor="#FFFFFF">
+
+        <ImageView
+            android:id="@+id/share_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/share_icon"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="10dp"
+            />
+        <ImageView
+            android:id="@+id/mail_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/mail_icon"
+            android:layout_marginLeft="10dp"
+            />
+    </android.support.v7.widget.Toolbar>
+
+    <fragment
+        android:name="com.example.myweather.DetailFragment"
+        android:id="@+id/detail_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--引入“master_title”标题布局-->
+    <com.example.myweather.MainTitleLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.example.myweather.MainTitleLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--master列表碎片-->
+        <fragment
+            android:id="@+id/master_fragment"
+            android:name="com.example.myweather.MasterFragment"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"/>
+
+        <!--detail布局（仅包含detail碎片）-->
+        <!--之所以用布局把碎片包起来，是为了当能找到这个布局时，即为双页模式（见MasterFragment）-->
+        <FrameLayout
+            android:id="@+id/detail_layout"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+            <fragment
+                android:name="com.example.myweather.DetailFragment"
+                android:id="@+id/detail_fragment"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+            />
+        </FrameLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

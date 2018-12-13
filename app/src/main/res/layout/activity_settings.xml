@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/activity_settings"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+    <!--Settings活动的标题栏-->
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/settings_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00BFFF"
+        app:navigationIcon="@drawable/back_icon"
+        app:title="Settings"
+        app:titleTextColor="#FFFFFF">
+    </android.support.v7.widget.Toolbar>
+
+    <!---location栏布局-->
+    <LinearLayout
+        android:id="@+id/location_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textColor="#171717"
+            />
+        <TextView
+            android:id="@+id/location_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Changsha"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="15dp"
+            />
+    </LinearLayout>
+    <View
+        android:background="#A8A8A8"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <!---Temperature Units栏布局-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Temperature Units"
+            android:textColor="#171717"
+            android:layout_marginBottom="5dp"
+            />
+        <RadioGroup
+            android:id="@+id/tempUnits_group"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <RadioButton
+                android:id="@+id/c_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:checked="true"
+                android:text="Celsius"/>
+            <RadioButton
+                android:id="@+id/f_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:checked="false"
+                android:text="Fahrenheit"/>
+            <RadioButton
+                android:id="@+id/k_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="10dp"
+                android:checked="false"
+                android:text="Kelvin"/>
+        </RadioGroup>
+    </LinearLayout>
+    <View
+        android:background="#A8A8A8"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+    <!---Weather Notifications栏外层布局-->
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!---Weather Notifications栏布局-->
+        <LinearLayout
+            android:id="@+id/Notificarions_layout"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Weather Notifications"
+                android:textColor="#171717"
+                />
+            <TextView
+                android:id="@+id/isNotify_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Enabled"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="15dp"
+                />
+        </LinearLayout>
+        <CheckBox
+            android:id="@+id/isNotify_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_marginLeft="120dp"
+            android:layout_gravity="center"
+            />
+    </LinearLayout>
+    <View
+        android:background="#A8A8A8"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"/>
+
+</LinearLayout>

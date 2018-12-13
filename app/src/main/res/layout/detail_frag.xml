@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F2F2F2">
+
+    <LinearLayout
+        android:id="@+id/visibility_layout"
+        android:orientation="vertical"
+        android:background="#F2F2F2"
+        android:layout_margin="5dp"
+        android:visibility="invisible"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--星期date1-->
+        <TextView
+            android:id="@+id/date1_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tomorrow"
+            android:textSize="20sp"
+            android:textColor="#171717"
+            android:layout_margin="10dp"
+            />
+        <!--日期date2-->
+        <TextView
+            android:id="@+id/date2_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="May 18"
+            android:textSize="15sp"
+            android:layout_marginLeft="15dp"
+            />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="50dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="20dp">
+                <TextView
+                    android:id="@+id/maxTemp_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="27度"
+                    android:textSize="50sp"
+                    android:layout_margin="10dp"
+                    />
+                <TextView
+                    android:id="@+id/minTemp_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="16度"
+                    android:textSize="40sp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_margin="5dp">
+                <ImageView
+                    android:id="@+id/weather_icon_view"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_margin="10dp"
+                    android:src="@drawable/d01"
+                    android:scaleType="centerCrop"
+                    />
+                <TextView
+                    android:id="@+id/weather_text_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Clouds"
+                    android:textSize="25sp"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--湿度-->
+        <TextView
+            android:id="@+id/humidity_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Humidity:78%"
+            android:textSize="20sp"
+            android:textColor="#171717"
+            android:layout_margin="5dp"
+            />
+        <!--压强-->
+        <TextView
+            android:id="@+id/pressure_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pressure:1018 hpa"
+            android:textSize="20sp"
+            android:textColor="#171717"
+            android:layout_margin="5dp"
+            />
+        <!--风-->
+        <TextView
+            android:id="@+id/wind_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Wind:3 km/h SE"
+            android:textSize="20sp"
+            android:textColor="#171717"
+            android:layout_margin="5dp"
+            />
+
+    </LinearLayout>
+
+
+</LinearLayout>

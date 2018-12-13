@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:id="@+id/master_frag"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/today_layout"
+        android:visibility="invisible"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#00BFFF"
+        android:layout_weight="1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginBottom="20dp">
+            <TextView
+                android:id="@+id/date_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today,May 17"
+                android:textSize="20sp"
+                android:textColor="#FFFFFF"
+                />
+            <TextView
+                android:id="@+id/maxTemp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="26度"
+                android:textSize="35sp"
+                android:layout_margin="4dp"
+                android:textColor="#FFFFFF"
+                />
+            <TextView
+                android:id="@+id/minTemp_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="14度"
+                android:textSize="25sp"
+                android:layout_marginLeft="15dp"
+                android:textColor="#FFFFFF"
+                />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp">
+            <ImageView
+                android:id="@+id/weather_icon_view"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                android:src="@drawable/d01"
+                android:scaleType="centerCrop"
+                />
+            <TextView
+                android:id="@+id/weather_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Clouds"
+                android:textSize="20sp"
+                android:layout_margin="10dp"
+                android:textColor="#FFFFFF"
+                />
+        </LinearLayout>
+    </LinearLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/master_recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </android.support.v7.widget.RecyclerView>
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+</LinearLayout>

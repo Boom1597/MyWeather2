@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!--天气图标-->
+    <ImageView
+        android:id="@+id/icon_item_view"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:src="@drawable/d01"
+        android:scaleType="centerCrop"
+        />
+
+    <!--星期和天气文字-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5">
+        <TextView
+            android:id="@+id/date1_item_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tomorrow"
+            android:textSize="20sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"
+            />
+        <TextView
+            android:id="@+id/main_item_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clouds"
+            android:textSize="15sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            />
+    </LinearLayout>
+
+    <!--最高（低）温度-->
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="2">
+        <TextView
+            android:id="@+id/maxTemp_item_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="27度"
+            android:textSize="20sp"
+            android:textColor="#171717"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="3dp"
+            />
+        <TextView
+            android:id="@+id/minTemp_item_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="16度"
+            android:textSize="13sp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            />
+
+    </LinearLayout>
+
+</LinearLayout>
